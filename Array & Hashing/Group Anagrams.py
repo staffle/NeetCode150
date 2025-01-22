@@ -24,11 +24,9 @@ class Solution:
             ans = [0] * 26
             for ch in s:
                 ans[ord(ch) - ord('a')] += 1
-            print(s, get_hash(ans))
             return get_hash(ans)
         
         anagram_groups = []
-        # print(make_freq_map("bdd"), make_freq_map("eat"))
         occured = dict()
         for s in strs:
             freq_map_hash = make_freq_map(s)
